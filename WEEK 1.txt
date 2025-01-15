@@ -1,0 +1,231 @@
+﻿Given below is a simple program written in C language.
+
+Change the text in the code given below to make the program print "Hello C" instead of "Hello B".
+#include <stdio.h>
+
+int main() 
+{
+	printf("Hello C");
+	return 0;
+}
+Feedback
+Expected	Got	
+Hello C
+Hello C
+Passed all tests!  
+
+Question 2
+The code given below contains instructions to print the text "I love Apples" to the console.
+
+The \n in the text "I love Apples\n" ensures that the line breaks after printing the text "I love Apples" (which means that nothing else is printed on the same line).
+
+Follow the steps given below to change the text, execute compile command and finally execute the file :
+
+In the code given below, change the text to print "I love Mangoes" instead of "I love Apples".
+ 
+
+#include <stdio.h>
+
+int main() 
+{
+    printf("I love Mangoes\n");
+    return 0;
+}
+Feedback
+Expected	Got	
+I love Mangoes
+I love Mangoes
+Passed all tests!  
+
+Question 3
+The fundamental data types in c are int, float and char. Today, we're discussing int and float data types.
+The printf() function prints the given statement to the console. The syntax is printf("format string",argument_list);. In the function, if we are using an integer, character, string or float as argument, then in the format string we have to write %d (integer), %c (character), %s (string), %f (float) respectively.
+The scanf() function reads the input data from the console. The syntax is scanf("format string",argument_list);. For ex: The scanf("%d",&number) statement reads integer number from the console and stores the given value in variable number.
+To input two integers separated by a space on a single line, the command is scanf("%d %d", &n, &m), where n and m are the two integers.
+Task
+Your task is to take two numbers of int data type, two numbers of float data type as input and output their sum:
+1.      Declare 4 variables: two of type int and two of type float.
+
+2.      Read 2 lines of input from stdin (according to the sequence given in the 'Input Format' section below) and initialize your 4 variables.
+
+3.      Use the + and - operator to perform the following operations:
+
+o    Print the sum and difference of two int variable on a new line.
+
+Print the sum and difference of two float variable rounded to one decimal place on a new line
+Input Format
+
+ The first line contains two integers.
+
+The second line contains two floating point numbers.
+Constraints
+·         1 ≤ integer variables ≤ 104
+·         1 ≤ float variables ≤ 104
+Output Format
+Print the sum and difference of both integers separated by a space on the first line, and the sum and difference of both float (scaled to 1 decimal place) separated by a space on the second line.
+Sample Input
+10 4
+4.0 2.0
+Sample Output
+14 6
+6.0 2.0
+Explanation
+When we sum the integers 10 and 4, we get the integer 14. When we subtract the second number 4 from the first number 10, we get 6 as their difference.
+When we sum the floating-point numbers 4.0 and 2.0, we get 6.0. When we subtract the second number 2.0 from the first number 4.0, we get 2.0 as their difference.
+#include <stdio.h>
+int main(){
+    int a,b,sum1,sub1;
+    float c,d,sum2,sub2;
+    scanf("%d %d %f %f",&a,&b,&c,&d);
+    sum1=a+b;
+    sub1=a-b;
+    sum2=c+d;
+    sub2=c-d;
+    printf("%d %d\n%.1f %.1f",sum1,sub1);
+ return 0;
+    
+}
+Feedback
+Input	Expected	Got	
+10 4
+4.0 2.0
+14 6
+6.0 2.0
+14 6
+6.0 2.0
+20 8
+8.0 4.0
+28 12
+12.0 4.0
+28 12
+12.0 4.0
+Passed all tests!
+
+Question 4
+Write a program to input a name (as a single character) and marks of three tests as m1, m2, and m3 of a student considering all the three marks have been given in integer format.
+
+Now, you need to calculate the average of the given marks and print it along with the name as mentioned in the output format section.
+
+All the test marks are in integers and hence calculate the average in integer as well. That is, you need to print the integer part of the average only and neglect the decimal part.
+
+Input format :
+
+Line 1 : Name(Single character)
+Line 2 : Marks scored in the 3 tests separated by single space. 
+
+Output format :
+
+First line of output prints the name of the student.
+Second line of the output prints the average mark.
+
+Constraints
+
+Marks for each student lie in the range 0 to 100 (both inclusive)
+
+Sample Input 1 :
+
+A
+3 4 6
+
+Sample Output 1 :
+
+A
+4
+
+Sample Input 2 :
+
+T
+7 3 8
+
+Sample Output 2 :
+
+T
+6
+
+Feedback
+	Input	Expected	Got	
+	A
+3 4 6	A
+4	A
+4	
+	T
+7 3 8	T
+6	T
+6	
+	R
+0 100 99	R
+66	R
+66	
+Passed all tests!  
+
+Question 5
+Some C data types, their format specifiers, and their most common bit widths are as follows:
+·         Int ("%d"): 32 Bit integer
+·         Long ("%ld"): 64 bit integer
+·         Char ("%c"): Character type
+·         Float ("%f"): 32 bit real value
+·         Double ("%lf"): 64 bit real value
+________________________________________
+Reading
+To read a data type, use the following syntax:
+scanf("`format_specifier`", &val)
+For example, to read a character followed by a double:
+char ch;
+double d;
+scanf("%c %lf", &ch, &d);
+For the moment, we can ignore the spacing between format specifiers.
+________________________________________
+Printing
+To print a data type, use the following syntax:
+printf("`format_specifier`", val)
+For example, to print a character followed by a double:
+char ch = 'd';
+double d = 234.432;
+printf("%c %lf", ch, d);
+Note: You can also use cin and cout instead of scanf and printf; however, if you are taking a million numbers as input and printing a million lines, it is faster to use scanf and printf.
+Input Format
+Input consists of the following space-separated values: int, long, char, float, and double, respectively.
+Output Format
+Print each element on a new line in the same order it was received as input. Note that the floating point value should be correct up to 3 decimal places and the double to 9 decimal places.
+Sample Input
+3 12345678912345 a 334.23 14049.30493
+Sample Output
+3
+12345678912345
+a
+334.230
+14049.304930000
+Explanation
+Print int 3,
+followed by long 12345678912345,
+followed by char a,
+followed by float 334.23,
+followed by double 14049.30493.
+
+Feedback
+	Input	Expected	Got	
+	3 12345678912345 a 334.23 14049.30493	3
+12345678912345
+a
+334.230
+14049.304930000	3
+12345678912345
+a
+334.230
+14049.304930000	
+Passed all tests!  
+
+Question 6
+Write a program to print the ASCII value and the two adjacent characters of the given character.
+ Input
+ E
+ Output
+ 69
+D F
+Feedback
+	Input	Expected	Got	
+	E	69
+D F	69
+D F	
+Passed all tests!  
+  
